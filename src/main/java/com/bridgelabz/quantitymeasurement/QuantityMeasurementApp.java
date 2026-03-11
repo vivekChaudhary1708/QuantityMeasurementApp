@@ -94,7 +94,7 @@ public class QuantityMeasurementApp {
             System.out.println("Output: Throws " + e.getClass().getSimpleName());
         }
         try {
-            new Quantity<LengthUnit>(10.0, LengthUnit.FEET).subtract((Quantity<LengthUnit>) (Quantity<?>) new Quantity<WeightUnit>(5.0, WeightUnit.KILOGRAM));
+            new Quantity<>(10.0, LengthUnit.FEET).subtract(new Quantity<>(5.0, LengthUnit.FEET));
         } catch (Exception e) {
             System.out.println("Output: Throws " + e.getClass().getSimpleName());
         }
